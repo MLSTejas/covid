@@ -40,7 +40,7 @@ if uploaded_file is not None:
     # Question 1
     if q1:
         st.subheader("Q1: Show the number of Confirmed, Deaths, and Recovered cases in each Region")
-        st.write(data.groupby('Region')['Confirmed', 'Deaths', 'Recovered'].sum())
+        st.write(data.groupby('Region')[['Confirmed', 'Deaths', 'Recovered']].sum())
 
     # Question 2
     if q2:
